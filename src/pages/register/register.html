@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>login/register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>UserID</ion-label>
+    <ion-input type="text" [(ngModel)]="userid"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <button style="width:45%; float: right;" ion-button color="secondary" block (click)="register()">Register</button>
+    <button style="width:45%; position:fixed" ion-button color="primary" block (click)="login()">Login</button>
+  </div>
+</ion-content>

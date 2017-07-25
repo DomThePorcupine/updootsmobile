@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>post something :)</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Your awesome post</ion-label>
+    <ion-input type="text" [(ngModel)]="newpost"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <button ion-button color="secondary" block (click)="create()">Post!</button>
+  </div>
+</ion-content>

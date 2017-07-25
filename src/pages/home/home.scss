@@ -1,3 +1,29 @@
 page-home {
 
 }
+.newpost{
+    background: none;
+    float: right;
+    bottom: 15px;
+    
+}
+.button-container {
+    float: right;
+    width: 20px;
+}
+.up {
+    top: 15px;
+    position: fixed;
+    background: none;
+}
+.down {
+    position: fixed;
+    bottom: 15px;
+    background: none;
+}
+.votes {
+    float: center;
+    bottom: 40px;
+    position: fixed;
+    right: 9px;
+}
