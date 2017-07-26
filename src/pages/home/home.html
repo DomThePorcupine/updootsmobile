@@ -6,30 +6,13 @@
       </button>
     </ion-buttons>
     <ion-title>updoots</ion-title>
-    <ion-buttons end>
-      <button (click)='openCreate()' ion-button icon-only color="royal">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-content>
-    <ion-list ng-if="posts" text-wrap>
-
-      <ion-item class="item item-text-wrap" *ngFor="let p of posts" style="height: 100px">
-        <div style="width: 80%">{{ p.message }}</div>
-        <div class="button-container">
-          <div class="row">
-          <button class="up"><i class="material-icons" (click)="doot(p.id, 1)">keyboard_arrow_up</i></button>
-            <h2 class="votes">{{p.updoots}}</h2>
-            <button class="down"><i class="material-icons" (click)="doot(p.id, 0)">keyboard_arrow_down</i></button>
-          </div>
-        </div>
-      </ion-item>
-
-    </ion-list>
-  </ion-content>
-  
+<ion-content>  
+  <ion-tabs>
+    <ion-tab tabIcon="flame" tabTitle="Hot" [root]="tab1"></ion-tab>
+    <ion-tab tabIcon="time" tabTitle="New" [root]="tab2"></ion-tab>
+    <ion-tab tabIcon="add" tabTitle="Post" [root]="tab3"></ion-tab>
+  </ion-tabs>
 </ion-content>

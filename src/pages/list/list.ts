@@ -1,23 +1,16 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
-import { Tab1, Tab2 } from './tabs';
-import { ListPage } from '../list/list'
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-list',
+  templateUrl: 'list.html',
 })
-export class HomePage {
-  tab1
-  tab2
-  tab3
-  constructor(public navCtrl: NavController, public http: Http) {
-    this.tab1 = ListPage;
-    this.tab2 = Tab2;
-    this.tab3 = CreatePage;
+export class ListPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
   }
 
   posts = [];
@@ -34,9 +27,6 @@ export class HomePage {
       .subscribe(data => {
         
         this.posts = JSON.parse(data['_body'])
-        for(var i = 0; i < this.posts.length; i++) {
-          this.posts[i].index = i;
-        }
         console.log(this.posts)
       }, error => {
         console.log(error);
@@ -59,7 +49,12 @@ export class HomePage {
     this.http.post("https://updoot.us/api/v1/doot", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
-        this.postRequest()
+        console.log(data['_body'])
+        for(var i = 0; i < this.posts.length; i++) {
+          if(this.posts[i].id === id) {
+            this.posts[i].updoots = JSON.parse(data['_body']).Updoots
+          }
+        }
       }, error => {
         // Bad but ignore for now
       });
@@ -85,10 +80,6 @@ export class HomePage {
     headers.append('Content-Type', 'text/plain' );
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
- 
-    let postParams = {
-      userid: 'dom'
-    }
 
     this.http.get("https://updoot.us/api/v1/message", options)
       .subscribe(data => {
