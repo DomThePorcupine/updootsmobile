@@ -53,6 +53,11 @@ export class ListPage {
         for(var i = 0; i < this.posts.length; i++) {
           if(this.posts[i].id === id) {
             this.posts[i].updoots = JSON.parse(data['_body']).Updoots
+            if(doot == 1) {
+              this.posts[i].vote = 1;
+            } else {
+              this.posts[i].vote = -1;
+            }
           }
         }
       }, error => {

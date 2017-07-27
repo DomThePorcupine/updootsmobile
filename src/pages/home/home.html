@@ -1,18 +1,19 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="lightpurple">
     <ion-buttons start>
       <button ng-if="auth == false" (click)='openReg()' ion-button icon-only color="royal">
         <ion-icon name="person"></ion-icon>
       </button>
     </ion-buttons>
+    <img src="assets/imgs/trumpet.png" height="30" width="30" style="float:left;">
     <ion-title>updoots</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>  
   <ion-tabs>
-    <ion-tab tabIcon="flame" tabTitle="Hot" [root]="tab1"></ion-tab>
-    <ion-tab tabIcon="time" tabTitle="New" [root]="tab2"></ion-tab>
-    <ion-tab tabIcon="add" tabTitle="Post" [root]="tab3"></ion-tab>
+    <ion-tab color="dark" tabIcon="flame" tabTitle="Hot" [root]="tab1"></ion-tab>
+    <ion-tab tabs-ios-tab-text-color-active="dark" tabIcon="time" tabTitle="New" [root]="tab2"></ion-tab>
+    <ion-tab tabs-ios-tab-text-color-active="dark" tabIcon="add" tabTitle="Post" [root]="tab3"></ion-tab>
   </ion-tabs>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-register',
@@ -8,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public toastCtrl: ToastController) {
   }
 
   userid = ''
@@ -27,7 +27,9 @@ export class RegisterPage {
     this.http.post("https://updoot.us/api/v1/register", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
-        this.login()
+        console.log(data)
+        this.presentToast()
+        //this.login()
       }, error => {
         // Bad but ignore for now
       });
@@ -51,6 +53,19 @@ export class RegisterPage {
         // Bad but ignore for now
       });
 
+  }
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'User created... Now logging you in',
+      duration: 3000,
+      position: 'bottom'
+    });
+
+    toast.onDidDismiss(() => {
+      this.login()
+    });
+
+    toast.present();
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
