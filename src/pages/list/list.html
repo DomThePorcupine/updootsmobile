@@ -5,15 +5,15 @@
       refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
-    <ion-list [virtualScroll]="posts" text-wrap>
+    <ion-list [virtualScroll]="posts" text-wrap inset>
 
     <ion-item class="item item-text-wrap" *virtualItem="let p" style="height: 100px">
       <div style="width: 80%">{{ p.message }}</div>
       <div class="button-container">
         <div class="row">
-        <button class="up"><i class="material-icons" (click)="doot(p.id, 1)" style="font-size: 40px">keyboard_arrow_up</i></button>
+        <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}'><i class="material-icons" (click)="doot(p.id, 1)" style="font-size: 40px">keyboard_arrow_up</i></button>
           <h2 class="votes">{{p.updoots}}</h2>
-          <button class="down"><i class="material-icons" (click)="doot(p.id, 0)" style="font-size: 40px">keyboard_arrow_down</i></button>
+          <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'><i class="material-icons" (click)="doot(p.id, 0)" style="font-size: 40px">keyboard_arrow_down</i></button>
         </div>
       </div>
     </ion-item>

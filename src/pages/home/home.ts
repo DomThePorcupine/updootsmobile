@@ -3,7 +3,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
-import { Tab1, Tab2 } from './tabs';
+import { Tab2 } from './tabs';
 import { ListPage } from '../list/list'
 
 @Component({
@@ -85,10 +85,6 @@ export class HomePage {
     headers.append('Content-Type', 'text/plain' );
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
- 
-    let postParams = {
-      userid: 'dom'
-    }
 
     this.http.get("https://updoot.us/api/v1/message", options)
       .subscribe(data => {

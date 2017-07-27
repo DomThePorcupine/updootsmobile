@@ -1,3 +1,44 @@
 page-list {
 
 }
+.newpost{
+    background: none;
+    float: right;
+    bottom: 15px;
+    
+}
+.button-container {
+    float: right;
+    width: 27px;
+    padding-right: 30px;
+}
+.up {
+    top: 5px;
+    position: fixed;
+    background: none;
+    color: darkgrey;
+}
+.upvote {
+    top: 5px;
+    position: fixed;
+    color: blue;
+    background: none;
+}
+.down {
+    position: fixed;
+    bottom: 5px;
+    background: none;
+    color: darkgrey;
+}
+.downvote {
+    background: none;
+    position: fixed;
+    bottom: 5px;
+    color: blue;
+}
+.votes {
+    float: center;
+    bottom: 40px;
+    position: fixed;
+    right: 9px;
+}
