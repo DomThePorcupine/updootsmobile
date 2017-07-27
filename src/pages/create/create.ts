@@ -13,7 +13,7 @@ export class CreatePage {
   }
 
   newpost = ''
-
+  tab
   create() {
     var headers = new Headers();
     headers.append("Accept", 'application/json');
@@ -28,7 +28,8 @@ export class CreatePage {
     this.http.post("https://updoot.us/api/v1/message", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
-        this.navCtrl.pop();
+        this.tab = this.navCtrl.parent;
+        this.tab.select(0);
       }, error => {
         // Bad but ignore for now
       });
