@@ -5,10 +5,10 @@ import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
 
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html',
+  selector: 'page-new-list',
+  templateUrl: 'new-list.html',
 })
-export class ListPage {
+export class NewListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
   }
@@ -23,8 +23,9 @@ export class ListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/top", options)
+    this.http.get("https://updoot.us/api/v1/message/new", options)
       .subscribe(data => {
+        
         this.posts = JSON.parse(data['_body'])
         console.log(this.posts)
       }, error => {
@@ -85,8 +86,9 @@ export class ListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/top", options)
+    this.http.get("https://updoot.us/api/v1/message/new", options)
       .subscribe(data => {
+        
         this.posts = JSON.parse(data['_body'])
         refresher.complete();
       }, error => {

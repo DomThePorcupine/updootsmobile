@@ -1,3 +1,21 @@
 page-create {
+.content{
+        background-color: #FFF;
+    }
 
+     .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+         color: #000 !important;
+     }
+
+     /* Workaround to hide android default validation colors */
+    ion-item.item-md.item-input.input-has-focus .item-inner,
+    ion-item.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+    ion-item.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+        border-bottom-color: #000;
+        box-shadow: none;
+    }
+
+     .item-md{
+         background-color: #fff;
+     }
 }

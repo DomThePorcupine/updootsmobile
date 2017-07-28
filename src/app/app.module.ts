@@ -10,7 +10,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { CreatePage } from '../pages/create/create';
-import { Tab1, Tab2 } from '../pages/home/tabs';
+import { NewListPage } from '../pages/new-list/new-list';
 import { ListPage } from '../pages/list/list';
 
 @NgModule({
@@ -19,8 +19,7 @@ import { ListPage } from '../pages/list/list';
     HomePage,
     RegisterPage,
     CreatePage,
-    Tab1,
-    Tab2,
+    NewListPage,
     ListPage
   ],
   imports: [
@@ -34,8 +33,7 @@ import { ListPage } from '../pages/list/list';
     HomePage,
     RegisterPage,
     CreatePage,
-    Tab1,
-    Tab2,
+    NewListPage,
     ListPage
   ],
   providers: [

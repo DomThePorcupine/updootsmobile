@@ -3,9 +3,9 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import { NavController, Platform } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
-import { Tab2 } from './tabs';
-import { ListPage } from '../list/list'
-import { StatusBar } from 'ionic-native'
+import { NewListPage } from '../new-list/new-list';
+import { ListPage } from '../list/list';
+import { StatusBar } from 'ionic-native';
 
 @Component({
   selector: 'page-home',
@@ -17,59 +17,12 @@ export class HomePage {
   tab3
   constructor(public navCtrl: NavController, public http: Http, public platform: Platform) {
     this.tab1 = ListPage;
-    this.tab2 = Tab2;
+    this.tab2 = NewListPage;
     this.tab3 = CreatePage;
   }
 
   posts = [];
   auth = false;
-
-  postRequest() {
-    var headers = new Headers();
-    headers.append("Accept", 'application/json');
-    headers.append('Content-Type', 'text/plain' );
-    headers.append('Authorization', '');
-    let options = new RequestOptions({ headers: headers, withCredentials: true });
-
-    this.http.get("https://updoot.us/api/v1/message", options)
-      .subscribe(data => {
-        
-        this.posts = JSON.parse(data['_body'])
-        for(var i = 0; i < this.posts.length; i++) {
-          this.posts[i].index = i;
-        }
-        console.log(this.posts)
-      }, error => {
-        console.log(error);
-      })
-
-  }
-
-  doot(id, doot) {
-    var headers = new Headers();
-    headers.append("Accept", 'application/json');
-    headers.append('Content-Type', 'text/plain' );
-    headers.append('Authorization', '');
-    let options = new RequestOptions({ headers: headers, withCredentials: true });
-
-    let postParams = {
-      message: id,
-      doot: doot
-    }
-
-    this.http.post("https://updoot.us/api/v1/doot", postParams, options)
-      .subscribe(data => {
-        // Should now be authenticated
-        this.postRequest()
-      }, error => {
-        // Bad but ignore for now
-      });
-
-  }
-
-  ionViewWillEnter() {
-    this.postRequest();
-  }
   
   openReg() {
     this.navCtrl.push(RegisterPage);
@@ -78,23 +31,6 @@ export class HomePage {
 
   openCreate() {
     this.navCtrl.push(CreatePage);
-  }
-
-  doRefresh(refresher) {
-    var headers = new Headers();
-    headers.append("Accept", 'application/json');
-    headers.append('Content-Type', 'text/plain' );
-    headers.append('Authorization', '');
-    let options = new RequestOptions({ headers: headers, withCredentials: true });
-
-    this.http.get("https://updoot.us/api/v1/message", options)
-      .subscribe(data => {
-        
-        this.posts = JSON.parse(data['_body'])
-        refresher.complete();
-      }, error => {
-        console.log(error);
-     })
   }
 
   doPulling(refresher) {
