@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import { NavController, Platform } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
