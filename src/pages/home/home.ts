@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
 import { Tab2 } from './tabs';
 import { ListPage } from '../list/list'
+import { StatusBar } from 'ionic-native'
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
   tab1
   tab2
   tab3
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(public navCtrl: NavController, public http: Http, public platform: Platform) {
     this.tab1 = ListPage;
     this.tab2 = Tab2;
     this.tab3 = CreatePage;
@@ -98,6 +99,12 @@ export class HomePage {
 
   doPulling(refresher) {
     console.log('DOPULLING', refresher.progress);
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      StatusBar.hide();
+    });
   }
 
 }
