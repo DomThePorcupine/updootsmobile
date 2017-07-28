@@ -27,7 +27,22 @@ export class NewListPage {
       .subscribe(data => {
         
         this.posts = JSON.parse(data['_body'])
-        console.log(this.posts)
+        for(var i = 0; i < this.posts.length; i++) {
+          var posted = Date.parse(this.posts[i].time);
+          console.log(posted);
+          var curr = Date.now()
+          var numHours = (Math.abs(posted - curr) / 36e5);
+          if(numHours < 1) {
+            // min
+            this.posts[i].time = (numHours * 60).toFixed(0).toString() + " min"
+          } else if(numHours > 24) {
+            // days
+            this.posts[i].time = (numHours / 24.0).toFixed(0).toString() + " days"
+          } else {
+            // hours
+            this.posts[i].time = (numHours).toFixed(0).toString() + " hrs"
+          }
+        }
       }, error => {
         console.log(error);
       })
@@ -90,6 +105,22 @@ export class NewListPage {
       .subscribe(data => {
         
         this.posts = JSON.parse(data['_body'])
+        for(var i = 0; i < this.posts.length; i++) {
+          var posted = Date.parse(this.posts[i].time);
+          console.log(posted);
+          var curr = Date.now()
+          var numHours = (Math.abs(posted - curr) / 36e5);
+          if(numHours < 1) {
+            // min
+            this.posts[i].time = (numHours * 60).toFixed(0).toString() + " min"
+          } else if(numHours > 24) {
+            // days
+            this.posts[i].time = (numHours / 24.0).toFixed(0).toString() + " days"
+          } else {
+            // hours
+            this.posts[i].time = (numHours).toFixed(0).toString() + " hrs"
+          }
+        }
         refresher.complete();
       }, error => {
         console.log(error);
