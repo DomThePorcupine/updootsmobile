@@ -1,12 +1,20 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="first-text">
+      updoots
+  </div>
+</div>
+
 <ion-header>
   <ion-navbar color="lightpurple">
+
     <ion-buttons start>
-      <button ng-if="auth == false" (click)='openReg()' ion-button icon-only color="royal">
+      <button (click)='openReg()' ion-button icon-only color="royal">
         <ion-icon name="person"></ion-icon>
       </button>
     </ion-buttons>
+
     <img src="assets/imgs/trumpet.png" height="30" width="30" style="float:left;">
-    <ion-title>updoots</ion-title>
+    <ion-title style="font-family: 'Lobster', cursive;">updoots</ion-title>
   </ion-navbar>
 </ion-header>
 

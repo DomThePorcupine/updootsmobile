@@ -1,3 +1,5 @@
+
+
 <ion-content>
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
@@ -5,6 +7,7 @@
       refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
+  
     <ion-list [virtualScroll]="posts" no-lines inset>
       <ion-item *virtualItem="let p">
         <div style="width: 80%; height:80%; float:left;">{{ p.message }}</div>

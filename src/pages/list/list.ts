@@ -124,7 +124,9 @@ export class ListPage {
         console.log(error);
      })
   }
-
+  ionViewDidLoad() {
+    this.postRequest()
+  }
   doPulling(refresher) {
     console.log('DOPULLING', refresher.progress);
   }

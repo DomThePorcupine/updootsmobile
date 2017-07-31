@@ -12,7 +12,7 @@ export class RegisterPage {
   }
 
   userid = ''
-
+  token = ''
   register() {
     var headers = new Headers();
     headers.append("Accept", 'application/json');
@@ -47,10 +47,12 @@ export class RegisterPage {
 
     this.http.post("https://updoot.us/api/v1/token", postParams, options)
       .subscribe(data => {
-        // Should now be authenticated
+        // Should now be 
+        this.token = JSON.parse(data['_body']).message;
         this.navCtrl.pop();
       }, error => {
         // Bad but ignore for now
+        console.log(error)
       });
 
   }

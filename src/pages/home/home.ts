@@ -5,7 +5,6 @@ import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
 import { NewListPage } from '../new-list/new-list';
 import { ListPage } from '../list/list';
-import { StatusBar } from 'ionic-native';
 
 @Component({
   selector: 'page-home',
@@ -15,10 +14,13 @@ export class HomePage {
   tab1
   tab2
   tab3
+  tabBarElement: any;
+  splash = true;
   constructor(public navCtrl: NavController, public http: Http, public platform: Platform) {
     this.tab1 = ListPage;
     this.tab2 = NewListPage;
     this.tab3 = CreatePage;
+    //this.tabBarElement = document.querySelector('.tabbar');
   }
 
   posts = [];
@@ -37,10 +39,16 @@ export class HomePage {
     console.log('DOPULLING', refresher.progress);
   }
 
+  ionViewDidLoad() {
+    //this.tabBarElement.style.display = 'none';
+    setTimeout(() => {
+      this.splash = false;
+      //this.tabBarElement.style.display = 'flex';
+    }, 2000);
+  }
+
   initializeApp() {
-    this.platform.ready().then(() => {
-      StatusBar.hide();
-    });
+    
   }
 
 }

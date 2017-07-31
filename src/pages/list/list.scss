@@ -1,7 +1,18 @@
 .ios, .md {
  
   page-list {
- 
+    .logintext {
+        align-items: center;
+        justify-content: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #A9A9A9;
+        font-family: 'Lobster';
+        font-size: 40px;
+        display: flex;
+    }
     .list-md[inset]{
         margin: 5px;
         margin-top: 20px;
