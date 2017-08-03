@@ -4,10 +4,23 @@
     .logintext {
         align-items: center;
         justify-content: center;
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        display: flex;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
+        -webkit-align-items: center;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        align-items: center;
         color: #A9A9A9;
         font-family: 'Lobster';
         font-size: 40px;
@@ -30,6 +43,7 @@
  
     ion-label {
       white-space: normal;
+      height: 100px !important;
     }
  
     ion-item-sliding {
@@ -57,9 +71,9 @@
     }
 
     .button-container > * {
-          flex-direction: row;  /* allows vertical centering with align-items: center; */
-  align-items: center;
-  flex: 1 1 100%;  /* take up entire column */
+        flex-direction: row;  /* allows vertical centering with align-items: center; */
+        align-items: center;
+        flex: 1 1 100%;  /* take up entire column */
     }
 
     .up {
@@ -67,6 +81,7 @@
         color: darkgray;
         align-items: center;
         filter: grayscale(100%);
+        font-size: 15pt;
     }
 
     .down {
@@ -74,6 +89,7 @@
         color: darkgray;
         align-items: center;
         filter: grayscale(100%);
+        height: 20px;
     }
 
     .votes {
@@ -89,11 +105,13 @@
     .upvote{
         background: none;
         color: #FBC233;
+        align-items: center;
     }
 
     .downvote   {
         background: none;
         color: #FBC233;
+        align-items: center;
     }
  
   }

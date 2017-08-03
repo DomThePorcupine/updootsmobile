@@ -3,4 +3,4 @@ updootsweb:
   ports:
     - "8080:8080"
   volumes:
-    - "./www:/app/www"
+    - "./platforms/browser/www:/app/www"

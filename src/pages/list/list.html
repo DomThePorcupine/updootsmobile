@@ -14,9 +14,9 @@
         <div class="time">{{p.time}}</div>
         <div class="button-container">
           <!-- <div class="row"> -->
-          <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}'><i class="material-icons" (click)="doot(p.id, 1)">🎺</i></button>
+          <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}' (click)="doot(p.id, 1)">🎺</button>
             <div class="votes">{{p.updoots}}</div>
-            <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'><i class="material-icons" (click)="doot(p.id, 0)">💩</i></button>
+            <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'(click)="doot(p.id, 0)">💩</button>
           <!-- </div> -->
         </div>
       </ion-item>
