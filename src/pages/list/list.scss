@@ -68,6 +68,7 @@
         flex-flow: column wrap;
         float: right;
         text-align: center;
+        min-height: 100px;
     }
 
     .button-container > * {
@@ -89,7 +90,7 @@
         color: darkgray;
         align-items: center;
         filter: grayscale(100%);
-        height: 20px;
+        font-size: 15pt;
     }
 
     .votes {
@@ -106,12 +107,14 @@
         background: none;
         color: #FBC233;
         align-items: center;
+        font-size: 15pt;
     }
 
     .downvote   {
         background: none;
         color: #FBC233;
         align-items: center;
+        font-size: 15pt;
     }
  
   }
