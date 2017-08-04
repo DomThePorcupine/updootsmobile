@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { Events } from 'ionic-angular';
 
 @Component({
   selector: 'page-register',
@@ -8,7 +9,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public toastCtrl: ToastController) {
+  constructor(public events: Events, public navCtrl: NavController, public navParams: NavParams, public http: Http, public toastCtrl: ToastController) {
   }
 
   userid = ''
@@ -27,13 +28,12 @@ export class RegisterPage {
     this.http.post("https://updoot.us/api/v1/register", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
-        console.log(data)
         this.presentToast()
-        //this.login()
       }, error => {
         // Bad but ignore for now
       });
   }
+
   login() {
     var headers = new Headers();
     headers.append("Accept", 'application/json');
@@ -47,15 +47,15 @@ export class RegisterPage {
 
     this.http.post("https://updoot.us/api/v1/token", postParams, options)
       .subscribe(data => {
-        // Should now be 
-        this.token = JSON.parse(data['_body']).message;
+        // Tell everyone that we are now authenticated
+        this.events.publish('user:authenticated');
         this.navCtrl.pop();
       }, error => {
         // Bad but ignore for now
         console.log(error)
       });
-
   }
+  
   presentToast() {
     let toast = this.toastCtrl.create({
       message: 'User created... Now logging you in',
@@ -69,8 +69,4 @@ export class RegisterPage {
 
     toast.present();
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
-  }
-
 }

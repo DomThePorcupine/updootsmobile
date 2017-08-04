@@ -1,24 +1,11 @@
-.ios, .md {
- 
-  page-list {
+page-list {
     .logintext {
-        align-items: center;
         justify-content: center;
-        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-flexbox; /* TWEENER - IE 10 */
-        display: -webkit-flex;
-        display: flex;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
-        -webkit-align-items: center;
-        display: flex;
-        display: -webkit-flex;
-        justify-content: center;
         -webkit-justify-content: center;
-        align-items: center;
         -webkit-align-items: center;
         align-items: center;
         color: #A9A9A9;
@@ -27,27 +14,33 @@
         display: flex;
     }
     .list-md[inset]{
-        margin: 5px;
-        margin-top: 20px;
+        margin: 5px !important;
+        margin-top: 20px !important;
     }
 
     ion-item {
-      background-color: #fff;
+      background-color: #fff !important;
       border-bottom: none !important;
-      height: 135px;
-      margin: 4px;
-      margin-bottom: 7px;
-      border-radius: 5px;
-      width: 98%;
+      height: 135px !important;
+      margin: 4px !important;
+      margin-bottom: 7px !important;
+      border-radius: 4px !important;
+      width: 98% !important;
     }
  
     ion-label {
-      white-space: normal;
+      white-space: normal !important;
       height: 100px !important;
     }
  
     ion-item-sliding {
-      margin: 10px;
+      margin: 10px !important;
+    }
+
+    .message {
+        width: 80%; 
+        height:80%; 
+        float:left;
     }
 
     .newpost {
@@ -66,7 +59,7 @@
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
-        float: right;
+        
         text-align: center;
         min-height: 100px;
     }
@@ -116,7 +109,13 @@
         align-items: center;
         font-size: 15pt;
     }
- 
-  }
+
+    .login-text {
+        font-size: 20pt;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lobster', cursive;
+        color: darkgray;
+    }
  
 }

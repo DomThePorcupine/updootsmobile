@@ -1,28 +1,46 @@
-.ios, .md {
- 
-  page-new-list {
- 
+page-new-list {
+    .logintext {
+        justify-content: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        color: #A9A9A9;
+        font-family: 'Lobster';
+        font-size: 40px;
+        display: flex;
+    }
     .list-md[inset]{
-        margin: 5px;
-        margin-top: 20px;
+        margin: 5px !important;
+        margin-top: 20px !important;
     }
 
     ion-item {
-      background-color: #fff;
+      background-color: #fff !important;
       border-bottom: none !important;
-      height: 135px;
-      margin: 4px;
-      margin-bottom: 7px;
-      border-radius: 5px;
-      width: 98%;
+      height: 135px !important;
+      margin: 4px !important;
+      margin-bottom: 7px !important;
+      border-radius: 4px !important;
+      width: 98% !important;
     }
  
     ion-label {
-      white-space: normal;
+      white-space: normal !important;
+      height: 100px !important;
     }
  
     ion-item-sliding {
-      margin: 10px;
+      margin: 10px !important;
+    }
+
+    .message {
+        width: 80%; 
+        height:80%; 
+        float:left;
     }
 
     .newpost {
@@ -41,14 +59,15 @@
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
-        float: right;
+        
         text-align: center;
+        min-height: 100px;
     }
 
     .button-container > * {
-          flex-direction: row;  /* allows vertical centering with align-items: center; */
-  align-items: center;
-  flex: 1 1 100%;  /* take up entire column */
+        flex-direction: row;  /* allows vertical centering with align-items: center; */
+        align-items: center;
+        flex: 1 1 100%;  /* take up entire column */
     }
 
     .up {
@@ -56,6 +75,7 @@
         color: darkgray;
         align-items: center;
         filter: grayscale(100%);
+        font-size: 15pt;
     }
 
     .down {
@@ -63,6 +83,7 @@
         color: darkgray;
         align-items: center;
         filter: grayscale(100%);
+        font-size: 15pt;
     }
 
     .votes {
@@ -78,13 +99,23 @@
     .upvote{
         background: none;
         color: #FBC233;
+        align-items: center;
+        font-size: 15pt;
     }
 
     .downvote   {
         background: none;
         color: #FBC233;
+        align-items: center;
+        font-size: 15pt;
     }
- 
-  }
+
+    .login-text {
+        font-size: 20pt;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lobster', cursive;
+        color: darkgray;
+    }
  
 }

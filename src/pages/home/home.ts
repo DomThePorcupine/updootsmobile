@@ -20,7 +20,6 @@ export class HomePage {
     this.tab1 = ListPage;
     this.tab2 = NewListPage;
     this.tab3 = CreatePage;
-    //this.tabBarElement = document.querySelector('.tabbar');
   }
 
   posts = [];
@@ -28,7 +27,6 @@ export class HomePage {
   
   openReg() {
     this.navCtrl.push(RegisterPage);
-    console.log("asdfasdfasdfasdfsdf")
   }
 
   openCreate() {
@@ -40,10 +38,8 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    //this.tabBarElement.style.display = 'none';
     setTimeout(() => {
       this.splash = false;
-      //this.tabBarElement.style.display = 'flex';
     }, 2000);
   }
 

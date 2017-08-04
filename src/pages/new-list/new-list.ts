@@ -124,6 +124,7 @@ export class NewListPage {
         refresher.complete();
       }, error => {
         console.log(error);
+        refresher.complete();
      })
   }
 

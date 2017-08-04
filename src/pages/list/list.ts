@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController, Events } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
@@ -10,7 +10,10 @@ import { CreatePage } from '../create/create';
 })
 export class ListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  constructor(public events: Events, public navCtrl: NavController, public navParams: NavParams, public http: Http, public toastCtrl: ToastController) {
+    this.events.subscribe('user:authenticated', (eventData) => {
+      this.postRequest();
+    })
   }
 
   posts = [];
@@ -25,10 +28,11 @@ export class ListPage {
 
     this.http.get("https://updoot.us/api/v1/message/top", options)
       .subscribe(data => {
+        this.auth = true;
         this.posts = JSON.parse(data['_body'])
+
         for(var i = 0; i < this.posts.length; i++) {
           var posted = Date.parse(this.posts[i].time);
-          console.log(posted);
           var curr = Date.now()
           var numHours = (Math.abs(posted - curr) / 36e5);
           if(numHours < 1) {
@@ -43,9 +47,20 @@ export class ListPage {
           }
         }
       }, error => {
-        console.log(error);
-      })
+        // We couldn't get posts so show an error toast
+        let toast = this.toastCtrl.create({
+          message: 'There was an error retreving posts, are you logged in?',
+          duration: 3000,
+          position: 'bottom'
+        });
 
+        toast.onDidDismiss(() => {
+          //this.login()
+        });
+
+        toast.present();
+        this.auth = true;
+      })
   }
 
   doot(id, doot) {
@@ -79,14 +94,9 @@ export class ListPage {
       });
 
   }
-
-  ionViewWillEnter() {
-    this.postRequest();
-  }
   
   openReg() {
     this.navCtrl.push(RegisterPage);
-    console.log("asdfasdfasdfasdfsdf")
   }
 
   openCreate() {
@@ -121,7 +131,18 @@ export class ListPage {
         }
         refresher.complete();
       }, error => {
-        console.log(error);
+        let toast = this.toastCtrl.create({
+            message: 'There was an error retreving posts :(',
+            duration: 3000,
+            position: 'bottom'
+          });
+
+          toast.onDidDismiss(() => {
+            //this.login()
+          });
+
+          toast.present();
+        refresher.complete();
      })
   }
   ionViewDidLoad() {

@@ -1,5 +1,3 @@
-
-
 <ion-content>
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
@@ -7,18 +5,16 @@
       refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
-  
-    <ion-list [virtualScroll]="posts" no-lines inset>
-      <ion-item *virtualItem="let p">
-        <div style="width: 60%; height:80%; float:left;">{{ p.message }}</div>
-        <div class="time">{{p.time}}</div>
-        <div class="button-container">
-          <!-- <div class="row"> -->
-          <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}' (click)="doot(p.id, 1)">🎺</button>
-            <div class="votes">{{p.updoots}}</div>
-            <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'(click)="doot(p.id, 0)">💩</button>
-          <!-- </div> -->
-        </div>
-      </ion-item>
+
+  <ion-list [virtualScroll]="posts" no-lines inset>
+    <ion-item *virtualItem="let p">
+      <div class="message">{{ p.message }}</div>
+      <div class="time">{{p.time}}</div>
+      <div class="button-container">
+        <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}' (click)="doot(p.id, 1)">🎺</button>
+        <div class="votes">{{p.updoots}}</div>
+        <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'(click)="doot(p.id, 0)">💩</button>
+      </div>
+    </ion-item>
   </ion-list>
 </ion-content>
