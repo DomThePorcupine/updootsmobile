@@ -15,7 +15,6 @@ export class HomePage {
   tab2
   tab3
   tabBarElement: any;
-  splash = true;
   constructor(public navCtrl: NavController, public http: Http, public platform: Platform) {
     this.tab1 = ListPage;
     this.tab2 = NewListPage;
@@ -38,9 +37,6 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    setTimeout(() => {
-      this.splash = false;
-    }, 2000);
   }
 
   initializeApp() {

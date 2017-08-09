@@ -1,44 +1,4 @@
 page-home {
-    #custom-overlay {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 100000;
-        width:100%;
-        background-color: white;
-        align-items: center;
-        justify-content: center;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-    }
-
-    @keyframes fadeInOut {
-        0% {
-            opacity: 0;
-        }
-
-        45% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0%;
-        }
-    }
-
-    .first-text {
-        font-size: 4.4rem;
-        opacity: 0;
-        animation-name: fadeInOut;
-        animation-duration: 5s;
-        color: #1F487E;
-        font-family: 'Lobster', cursive;
-    }
-
     .title-text {
         font-family: 'Lobster', cursive;
         font-size: 17pt !important;
