@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Events } from 'ionic-angular';
+import { API } from '../api';
 
 @Component({
   selector: 'page-register',
@@ -25,12 +26,13 @@ export class RegisterPage {
       userid: this.userid
     }
 
-    this.http.post("https://updoot.us/api/v1/register", postParams, options)
+    this.http.post(API + "/api/v1/register", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
-        this.presentToast()
+        this.presentToast(null)
       }, error => {
         // Bad but ignore for now
+        this.presentToast(JSON.parse(error['_body']).message)
       });
   }
 
@@ -45,7 +47,7 @@ export class RegisterPage {
       userid: this.userid
     }
 
-    this.http.post("https://updoot.us/api/v1/token", postParams, options)
+    this.http.post(API + "/api/v1/token", postParams, options)
       .subscribe(data => {
         // Tell everyone that we are now authenticated
         this.events.publish('user:authenticated');
@@ -56,15 +58,17 @@ export class RegisterPage {
       });
   }
   
-  presentToast() {
+  presentToast(msg) {
     let toast = this.toastCtrl.create({
-      message: 'User created... Now logging you in',
+      message: msg || 'User created... Now logging you in',
       duration: 3000,
       position: 'bottom'
     });
 
     toast.onDidDismiss(() => {
-      this.login()
+      if(!msg) {
+        this.login()
+      }
     });
 
     toast.present();

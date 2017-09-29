@@ -3,6 +3,7 @@ import { NavController, NavParams, ToastController, Events } from 'ionic-angular
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
+import { API } from '../api';
 
 @Component({
   selector: 'page-list',
@@ -26,7 +27,7 @@ export class ListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/top", options)
+    this.http.get(API + "/api/v1/message/top", options)
       .subscribe(data => {
         this.auth = true;
         this.posts = JSON.parse(data['_body'])
@@ -75,7 +76,7 @@ export class ListPage {
       doot: doot
     }
 
-    this.http.post("https://updoot.us/api/v1/doot", postParams, options)
+    this.http.post(API + "/api/v1/doot", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
         console.log(data['_body'])
@@ -110,7 +111,7 @@ export class ListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/top", options)
+    this.http.get(API + "/api/v1/message/top", options)
       .subscribe(data => {
         this.posts = JSON.parse(data['_body'])
         for(var i = 0; i < this.posts.length; i++) {

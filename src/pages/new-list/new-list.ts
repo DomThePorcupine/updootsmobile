@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { RegisterPage } from '../register/register';
 import { CreatePage } from '../create/create';
+import { API } from '../api';
 
 @Component({
   selector: 'page-new-list',
@@ -23,7 +24,7 @@ export class NewListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/new", options)
+    this.http.get(API + "/api/v1/message/new", options)
       .subscribe(data => {
         
         this.posts = JSON.parse(data['_body'])
@@ -61,7 +62,7 @@ export class NewListPage {
       doot: doot
     }
 
-    this.http.post("https://updoot.us/api/v1/doot", postParams, options)
+    this.http.post(API + "/api/v1/doot", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
         console.log(data['_body'])
@@ -101,7 +102,7 @@ export class NewListPage {
     headers.append('Authorization', '');
     let options = new RequestOptions({ headers: headers, withCredentials: true });
 
-    this.http.get("https://updoot.us/api/v1/message/new", options)
+    this.http.get(API + "/api/v1/message/new", options)
       .subscribe(data => {
         
         this.posts = JSON.parse(data['_body'])

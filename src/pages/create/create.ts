@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { API } from '../api';
 
 @Component({
   selector: 'page-create',
@@ -25,7 +25,7 @@ export class CreatePage {
       message: this.newpost
     }
 
-    this.http.post("https://updoot.us/api/v1/message", postParams, options)
+    this.http.post(API + "/api/v1/message", postParams, options)
       .subscribe(data => {
         // Should now be authenticated
         this.tab = this.navCtrl.parent;

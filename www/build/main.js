@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 109:
+/***/ 141:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -9,11 +9,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 109;
+webpackEmptyAsyncContext.id = 141;
 
 /***/ }),
 
-/***/ 150:
+/***/ 184:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -22,22 +22,22 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 150;
+webpackEmptyAsyncContext.id = 184;
 
 /***/ }),
 
-/***/ 194:
+/***/ 252:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__new_list_new_list__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_list__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__new_list_new_list__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_list__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,7 +81,7 @@ var HomePage = (function () {
     return HomePage;
 }());
 HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-home',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="lightpurple">\n      <button style="float:right;" (click)=\'openReg()\' ion-button icon-only color="lightpurple">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    <ion-title><div class="title-text">updoots</div></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>  \n  <ion-tabs>\n    <ion-tab color="red" tabIcon="flame" tabTitle="Hot" [root]="tab1"></ion-tab>\n    <ion-tab tabs-ios-tab-text-color-active="red" tabIcon="time" tabTitle="New" [root]="tab2"></ion-tab>\n    <ion-tab tabs-ios-tab-text-color-active="red" tabIcon="add" tabTitle="Post" [root]="tab3"></ion-tab>\n  </ion-tabs>\n</ion-content>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Platform */]])
@@ -91,16 +91,17 @@ HomePage = __decorate([
 
 /***/ }),
 
-/***/ 195:
+/***/ 253:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__api__ = __webpack_require__(78);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,6 +111,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -130,7 +132,7 @@ var NewListPage = (function () {
         headers.append('Content-Type', 'text/plain');
         headers.append('Authorization', '');
         var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers, withCredentials: true });
-        this.http.get("https://updoot.us/api/v1/message/new", options)
+        this.http.get(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/message/new", options)
             .subscribe(function (data) {
             _this.posts = JSON.parse(data['_body']);
             for (var i = 0; i < _this.posts.length; i++) {
@@ -166,7 +168,7 @@ var NewListPage = (function () {
             message: id,
             doot: doot
         };
-        this.http.post("https://updoot.us/api/v1/doot", postParams, options)
+        this.http.post(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/doot", postParams, options)
             .subscribe(function (data) {
             // Should now be authenticated
             console.log(data['_body']);
@@ -202,7 +204,7 @@ var NewListPage = (function () {
         headers.append('Content-Type', 'text/plain');
         headers.append('Authorization', '');
         var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers, withCredentials: true });
-        this.http.get("https://updoot.us/api/v1/message/new", options)
+        this.http.get(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/message/new", options)
             .subscribe(function (data) {
             _this.posts = JSON.parse(data['_body']);
             for (var i = 0; i < _this.posts.length; i++) {
@@ -235,7 +237,7 @@ var NewListPage = (function () {
     return NewListPage;
 }());
 NewListPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-new-list',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/new-list/new-list.html"*/'<ion-content>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingText="Pull to refresh..."\n      refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list [virtualScroll]="posts" no-lines inset>\n    <ion-item *virtualItem="let p">\n      <div class="message">{{ p.message }}</div>\n      <div class="time">{{p.time}}</div>\n      <div class="button-container">\n        <button [ngClass]=\'{upvote : p.vote == 1, up: p.vote != 1}\' (click)="doot(p.id, 1)">🎺</button>\n        <div class="votes">{{p.updoots}}</div>\n        <button [ngClass]=\'{downvote : p.vote == -1, down: p.vote != -1}\'(click)="doot(p.id, 0)">💩</button>\n      </div>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/new-list/new-list.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
@@ -245,16 +247,17 @@ NewListPage = __decorate([
 
 /***/ }),
 
-/***/ 196:
+/***/ 254:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_create__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__api__ = __webpack_require__(78);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -264,6 +267,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -290,7 +294,7 @@ var ListPage = (function () {
         headers.append('Content-Type', 'text/plain');
         headers.append('Authorization', '');
         var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers, withCredentials: true });
-        this.http.get("https://updoot.us/api/v1/message/top", options)
+        this.http.get(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/message/top", options)
             .subscribe(function (data) {
             _this.auth = true;
             _this.posts = JSON.parse(data['_body']);
@@ -336,7 +340,7 @@ var ListPage = (function () {
             message: id,
             doot: doot
         };
-        this.http.post("https://updoot.us/api/v1/doot", postParams, options)
+        this.http.post(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/doot", postParams, options)
             .subscribe(function (data) {
             // Should now be authenticated
             console.log(data['_body']);
@@ -368,7 +372,7 @@ var ListPage = (function () {
         headers.append('Content-Type', 'text/plain');
         headers.append('Authorization', '');
         var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers, withCredentials: true });
-        this.http.get("https://updoot.us/api/v1/message/top", options)
+        this.http.get(__WEBPACK_IMPORTED_MODULE_5__api__["a" /* API */] + "/api/v1/message/top", options)
             .subscribe(function (data) {
             _this.posts = JSON.parse(data['_body']);
             for (var i = 0; i < _this.posts.length; i++) {
@@ -412,8 +416,8 @@ var ListPage = (function () {
     return ListPage;
 }());
 ListPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-list',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/list/list.html"*/'<ion-content>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingText="Pull to refresh..."\n      refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list [virtualScroll]="posts" no-lines inset>\n    <ion-item *virtualItem="let p">\n      <div class="message">{{ p.message }}</div>\n      <div class="time">{{p.time}}</div>\n      <div class="button-container">\n        <button [ngClass]=\'{upvote : p.vote == 1, up: p.vote != 1}\' (click)="doot(p.id, 1)">🎺</button>\n        <div class="votes">{{p.updoots}}</div>\n        <button [ngClass]=\'{downvote : p.vote == -1, down: p.vote != -1}\'(click)="doot(p.id, 0)">💩</button>\n      </div>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/list/list.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-list',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/list/list.html"*/'<ion-content>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content\n      pullingText="Pull to refresh..."\n      refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list [virtualScroll]="posts" no-lines inset>\n    <ion-item *virtualItem="let p">\n      <div class="message">{{ p.message }}</div>\n      <div class="time">{{p.time}}</div>\n      <div class="button-container">\n        <button [ngClass]=\'{upvote : p.vote == 1, up: p.vote != 1}\' (click)="doot(p.id, 1)">🎺</button>\n        <div class="votes"><ng2-odometer [number]="p.updoots" [theme]="\'minimal\'"></ng2-odometer></div>\n        <button [ngClass]=\'{downvote : p.vote == -1, down: p.vote != -1}\'(click)="doot(p.id, 0)">💩</button>\n      </div>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/list/list.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
 ], ListPage);
@@ -422,13 +426,13 @@ ListPage = __decorate([
 
 /***/ }),
 
-/***/ 197:
+/***/ 255:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(260);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -436,23 +440,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 216:
+/***/ 260:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_register__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_create_create__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_new_list_new_list__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_list_list__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_odometer__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_odometer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_odometer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_create_create__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_new_list_new_list__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_list_list__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -471,39 +477,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_register_register__["a" /* RegisterPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_create_create__["a" /* CreatePage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_new_list_new_list__["a" /* NewListPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_list_list__["a" /* ListPage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_register_register__["a" /* RegisterPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_create_create__["a" /* CreatePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_new_list_new_list__["a" /* NewListPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_list_list__["a" /* ListPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */])
+            __WEBPACK_IMPORTED_MODULE_6__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_3_ng2_odometer__["Ng2OdometerModule"].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */])
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_register_register__["a" /* RegisterPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_create_create__["a" /* CreatePage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_new_list_new_list__["a" /* NewListPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_list_list__["a" /* ListPage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_register_register__["a" /* RegisterPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_create_create__["a" /* CreatePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_new_list_new_list__["a" /* NewListPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_list_list__["a" /* ListPage */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
         ]
     })
 ], AppModule);
@@ -512,16 +520,16 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 265:
+/***/ 584:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(252);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -549,7 +557,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -558,14 +566,15 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 50:
+/***/ 77:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__api__ = __webpack_require__(78);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -575,6 +584,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -599,12 +609,13 @@ var RegisterPage = (function () {
         var postParams = {
             userid: this.userid
         };
-        this.http.post("https://updoot.us/api/v1/register", postParams, options)
+        this.http.post(__WEBPACK_IMPORTED_MODULE_3__api__["a" /* API */] + "/api/v1/register", postParams, options)
             .subscribe(function (data) {
             // Should now be authenticated
-            _this.presentToast();
+            _this.presentToast(null);
         }, function (error) {
             // Bad but ignore for now
+            _this.presentToast(JSON.parse(error['_body']).message);
         });
     };
     RegisterPage.prototype.login = function () {
@@ -617,7 +628,7 @@ var RegisterPage = (function () {
         var postParams = {
             userid: this.userid
         };
-        this.http.post("https://updoot.us/api/v1/token", postParams, options)
+        this.http.post(__WEBPACK_IMPORTED_MODULE_3__api__["a" /* API */] + "/api/v1/token", postParams, options)
             .subscribe(function (data) {
             // Tell everyone that we are now authenticated
             _this.events.publish('user:authenticated');
@@ -627,23 +638,25 @@ var RegisterPage = (function () {
             console.log(error);
         });
     };
-    RegisterPage.prototype.presentToast = function () {
+    RegisterPage.prototype.presentToast = function (msg) {
         var _this = this;
         var toast = this.toastCtrl.create({
-            message: 'User created... Now logging you in',
+            message: msg || 'User created... Now logging you in',
             duration: 3000,
             position: 'bottom'
         });
         toast.onDidDismiss(function () {
-            _this.login();
+            if (!msg) {
+                _this.login();
+            }
         });
         toast.present();
     };
     return RegisterPage;
 }());
 RegisterPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/register/register.html"*/'<ion-header>\n\n  <ion-navbar color="lightpurple">\n    <ion-title>login/register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label floating>UserID</ion-label>\n    <ion-input type="text" [(ngModel)]="userid"></ion-input>\n  </ion-item>\n\n  <div padding>\n    <button style="width:45%; float: right;" ion-button color="secondary" block (click)="register()">Register</button>\n    <button style="width:45%; position:fixed" ion-button color="secondary" block (click)="login()">Login</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/register/register.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-register',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/register/register.html"*/'<ion-header>\n\n  <ion-navbar color="lightpurple">\n    <ion-title>login/register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label floating>UserID (This is your pitt email)</ion-label>\n    <ion-input type="text" [(ngModel)]="userid"></ion-input>\n  </ion-item>\n\n  <div padding>\n    <button style="width:45%; float: right;" ion-button color="secondary" block (click)="register()">Register</button>\n    <button style="width:45%; position:fixed" ion-button color="secondary" block (click)="login()">Login</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/register/register.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* ToastController */]])
 ], RegisterPage);
@@ -652,14 +665,25 @@ RegisterPage = __decorate([
 
 /***/ }),
 
-/***/ 51:
+/***/ 78:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return API; });
+var API = 'http://192.168.1.51:3000';
+//# sourceMappingURL=api.js.map
+
+/***/ }),
+
+/***/ 79:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__api__ = __webpack_require__(78);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -669,6 +693,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -689,7 +714,7 @@ var CreatePage = (function () {
         var postParams = {
             message: this.newpost
         };
-        this.http.post("https://updoot.us/api/v1/message", postParams, options)
+        this.http.post(__WEBPACK_IMPORTED_MODULE_3__api__["a" /* API */] + "/api/v1/message", postParams, options)
             .subscribe(function (data) {
             // Should now be authenticated
             _this.tab = _this.navCtrl.parent;
@@ -704,7 +729,7 @@ var CreatePage = (function () {
     return CreatePage;
 }());
 CreatePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-create',template:/*ion-inline-start:"/Users/dom/src/updootsmobile/src/pages/create/create.html"*/'<ion-content padding>\n  <ion-item style="background-color: white;">\n    <ion-textarea maxlength=250 cols="40" rows="6" type="text" [(ngModel)]="newpost"></ion-textarea>\n  </ion-item>\n\n  <div style="padding-top:10px;">\n    <button style="width: 40%; float:right;" ion-button color="baige" block (click)="create()">Post!</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/dom/src/updootsmobile/src/pages/create/create.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
@@ -714,5 +739,5 @@ CreatePage = __decorate([
 
 /***/ })
 
-},[197]);
+},[255]);
 //# sourceMappingURL=main.js.map
