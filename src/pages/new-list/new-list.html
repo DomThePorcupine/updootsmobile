@@ -12,7 +12,7 @@
       <div class="time">{{p.time}}</div>
       <div class="button-container">
         <button [ngClass]='{upvote : p.vote == 1, up: p.vote != 1}' (click)="doot(p.id, 1)">🎺</button>
-        <div class="votes">{{p.updoots}}</div>
+        <div class="votes"><ng2-odometer [number]="p.updoots" [theme]="'minimal'"></ng2-odometer></div>
         <button [ngClass]='{downvote : p.vote == -1, down: p.vote != -1}'(click)="doot(p.id, 0)">💩</button>
       </div>
     </ion-item>
