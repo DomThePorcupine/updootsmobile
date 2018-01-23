@@ -1,8 +1,7 @@
-FROM node:8.2.1-alpine
-RUN mkdir /app
-WORKDIR /app
-VOLUME /app/www
-COPY server.js /app
-RUN npm install express
-EXPOSE 8080
-CMD ["node", "server.js"]
+FROM node:9.4.0-slim
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY www/ ./dist
+COPY server .
+RUN npm install
+CMD [ "npm", "start" ]
