@@ -1,1 +1,1 @@
-export const API = 'https://updoot.us'
+export const API = 'http://updoot.us'

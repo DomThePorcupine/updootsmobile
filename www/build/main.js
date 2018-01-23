@@ -670,7 +670,7 @@ RegisterPage = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return API; });
-var API = 'https://updoot.us';
+var API = 'http://updoot.us';
 //# sourceMappingURL=api.js.map
 
 /***/ }),
